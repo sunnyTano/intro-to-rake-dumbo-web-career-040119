@@ -10,6 +10,11 @@ namespace :greeting do
   end
 end
 
+desc 'connection to environment.rb'
+task :environment do
+  require_relative './config/environment'
+end
+
 namespace :db do
   desc 'migrates changes to your database'
   task :migrate => :environment do
@@ -21,11 +26,6 @@ namespace :db do
     require_relative './db/seeds.rb'
   end
 end
-
-# desc 'connection to environment.rb'
-# task :environment do
-#   require_relative './config/environment'
-# end
 
 desc 'drop into the Pry console'
 task :console => :environment do
