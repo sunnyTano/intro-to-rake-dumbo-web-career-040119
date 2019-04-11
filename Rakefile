@@ -16,16 +16,16 @@ namespace :db do
     Student.create_table
   end
 
-  desc 'seeds database with dummy data'
+  desc 'seeds database with some dummy data'
   task :seed do
     require_relative './db/seeds.rb'
   end
 end
 
-desc 'connection to environment.rb'
-task :environment do
-  require_relative './config/environment'
-end
+# desc 'connection to environment.rb'
+# task :environment do
+#   require_relative './config/environment'
+# end
 
 desc 'drop into the Pry console'
 task :console => :environment do
