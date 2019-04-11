@@ -10,10 +10,10 @@ namespace :greeting do
   end
 end
 
-# desc 'connection to environment.rb'
-# task :environment do
-#   require_relative './config/environment'
-# end
+desc 'connection to environment.rb'
+task :environment do
+  require_relative './config/environment'
+end
 
 namespace :db do
   desc 'migrates changes to your database'
